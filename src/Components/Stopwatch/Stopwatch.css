@@ -1,0 +1,61 @@
+.tool-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tool-card h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.stopwatch-screen {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  padding: 1rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn.start {
+  background: #10b981;
+  color: white;
+}
+
+.btn.pause {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn.reset {
+  background: var(--badge-bg);
+  color: var(--text-primary);
+}

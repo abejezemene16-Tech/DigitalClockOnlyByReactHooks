@@ -1,0 +1,191 @@
+.alarm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.alarm-header h3 {
+  margin: 0;
+}
+
+.alarm-count {
+  background: var(--badge-bg);
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.alarm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.alarm-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.alarm-input {
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--badge-bg);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.alarm-input.time-picker {
+  flex: 1;
+}
+
+.alarm-input.label-input {
+  flex: 1.2;
+  font-weight: 500;
+}
+
+.alarm-input:focus {
+  border-color: var(--accent-color);
+}
+
+.add-alarm-btn {
+  background: var(--accent-color);
+  color: #ffffff;
+  width: 100%;
+  padding: 0.65rem;
+}
+
+/* የ Alarms ዝርዝር (Scrollable List) */
+.alarm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-height: 190px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.alarm-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.alarm-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 8px;
+}
+
+.empty-alarm {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 1.2rem 0;
+}
+
+.alarm-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--badge-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.alarm-item.inactive {
+  opacity: 0.5;
+}
+
+.alarm-item.item-ringing {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.alarm-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm-item-time {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.alarm-item-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.alarm-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.alarm-action-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.alarm-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.toggle-btn.on {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.toggle-btn.off {
+  background: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.stop-btn {
+  background: #ef4444;
+  color: #ffffff;
+  animation: pulse 1s infinite;
+}
+
+.delete-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.35rem 0.55rem;
+}
+
+.delete-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.tool-card.ringing {
+  border-color: #ef4444;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
